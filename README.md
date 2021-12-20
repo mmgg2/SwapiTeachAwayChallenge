@@ -7,7 +7,7 @@
   <li>Web Server: Apache 2.2.x or 2.4.x or Nginx (stable version).
     <li>PHP >=7.4.14 and < 8.0. </li>
     <li>MySQL 8.0. </li>
-   <li>Browser Chrome </li>
+   <li>Browser Chrome.</li>
 </ul>
 
 
