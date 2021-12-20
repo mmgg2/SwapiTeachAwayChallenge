@@ -151,6 +151,10 @@ class SwapiHelper {
         $stmt->close();
     
         $total = $vehicle['total'] - $amount;
+
+        if($total < 0){
+            $total = 0;
+        }
     
         if ($result->num_rows > 0){
             $sql = 'UPDATE vehicle SET total='.$total.' where vehicle_id='.$id;
@@ -290,6 +294,10 @@ class SwapiHelper {
         $stmt->close();
     
         $total = $starship['total'] - $amount;
+
+        if($total < 0){
+            $total = 0;
+        }
     
         if ($result->num_rows > 0){
             //Update starship total

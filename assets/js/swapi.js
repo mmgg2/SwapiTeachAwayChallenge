@@ -66,7 +66,7 @@ $(document).ready(function() {
     $("#btnDecrementVehicle").click(function() {
         $("#myform input[type=text]").val('');
         $("#myform input[type=number]").val('');
-        $("#myform input[name=action]").val('5');
+        $("#myform input[name=action]").val('4');
         $("#myform").toggle();
     });
 
