@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&family=Odibee+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.teachaway.com/themes/contrib/tams/favicon.ico">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/main.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="assets/js/swapi.js"></script>
+    <title>Teachaway Coding Challenge </title>
+</head>
+<body>
+    <center>
+            </br>
+            <img src="assets/img/logo.svg" width="300px"/>
+            <span style="color:#ff9800;">Coding Challenge</span>
+            </br></br></br>
+        
+            <form id="starshipForm" method="post">
+                <input type="hidden" id="action" name="action" value="5">
+                <input type="number" name="id" placeholder="Search by starship"
+                required="required" pattern="[A-Za-z0-9]{1,20}"/>
+                <button class="pesquisar">
+                <i class="fa fa-search"></i>
+                </button>
+            </form>
+            <br><br>
+
+            <form id="vehicleForm" method="post">
+                <input type="hidden" id="action" name="action" value="1">
+                <input type="number" name="id" placeholder="Search by vehicle"
+                required="required" pattern="[A-Za-z0-9]{1,20}"/>
+                <button class="pesquisar">
+                <i class="fa fa-search"></i>
+                </button>
+            </form>
+        <br>
+        <!-- Vehicle Grid -->
+        <div id="vehicleGrid" style="display:none;">
+            <hr>
+            <span id="title" style="font-size: 25px;color:#999999;"></span><br /><br />
+            <span class="label info" id="total"></span><br /><br />
+            <table id="vehicle" style="width: 60%;">
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>model</th>
+                <th>manufacturer</th>
+                <th>cost_in_credits</th>
+                <th>length</th>
+                <th>max_atmosphering_speed</th>
+                <th>crew</th>
+                <th>passengers</th>
+                <th>cargo_capacity</th>
+                <th>consumables</th>
+                <th>vehicle_class</th>
+            </tr>
+            </table><br />
+            <div id="panel">
+                <button class="botao" id="btnSetTotalVehicle">Set total units</button>
+                <button class="botao" id="btnIncrementVehicle" >Add units</button>
+                <button class="botao" id="btnDecrementVehicle">Remove units</button><br>
+            </div>
+        </div>
+        <!-- Starship Grid-->
+        <div id="starshipGrid" style="display:none;">
+            <hr>
+            <span id="title" style="font-size: 25px;color:#999999;"></span><br /><br />
+            <span class="label info" id="total"></span><br /><br />
+            <table id="starship" style="width: 60%;">
+            <tr>
+                <th>Id</th>
+                <th>name</th> 
+                <th>model</th>
+                <th>manufacturer</th> 
+                <th>cost_in_credits</th> 
+                <th>length</th>
+                <th>max_atmosphering_speed</th> 
+                <th>crew</th>
+                <th>passengers</th> 
+                <th>cargo_capacity</th> 
+                <th>consumables</th>
+                <th>hyperdrive_rating</th> 
+                <th>MGLT</th>
+                <th>starship_class</th>
+            </tr>
+            </table><br />
+            <div id="panel">
+                <button class="botao" id="btnSetTotalStarship">Set total units</button>
+                <button class="botao" id="btnIncrementStarship" >Add units</button>
+                <button class="botao" id="btnDecrementStarship">Remove units</button><br>
+            </div>
+        </div>
+
+        <!-- Dialog Box-->
+        <div class="dialog" id="myform">
+            <form id="dialogForm" method="post">
+                <input type="hidden" id="action" name="action" value="">
+                <input type="hidden" id="id" name="id" value="">
+                <label>Amount</label>
+                <input type="number" id="amount" name="amount"
+                required="required" pattern="[A-Za-z0-9]{1,20}" value="">
+                <div align="center">
+                    <input type="button" value="Cancel" id="btnCancel">
+                    <input type="submit" value="Save" id="btnOK">
+                </div>
+            </form>
+        </div>
+    </center>
+
+    <div class="footer-basic" style="margin-top: 32px">
+        <footer>
+            <ul class="list-inline">
+                Maximiliano Garbate - Software Engineer
+            </ul>
+            <p class="copyright">Coding Challenge - 2021</p>
+        </footer>
+    </div>
+</body>
+</html>

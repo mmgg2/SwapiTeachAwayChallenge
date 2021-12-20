@@ -1,0 +1,8 @@
+{
+"parameters": {
+        "database_host": "localhost",
+        "database_name": "swapi",
+        "database_user": "admin",
+        "database_password": "123456"
+    }
+}
